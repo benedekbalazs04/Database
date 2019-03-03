@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<DialogPane maxHeight="400.0" maxWidth="400.0"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.editGUI.EditSong">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Please fill Song title, Song track and Album name fields!" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+            <Label text="Song title" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="songTitle" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Song track" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Spinner fx:id="songTrack" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Album name" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="albumName" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

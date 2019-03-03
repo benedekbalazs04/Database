@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DialogPane?>
+
+<DialogPane maxHeight="400.0" maxWidth="400.0"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.editGUI.EditArtist">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Please fill Artist name field!"
+                   GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3"/>
+            <Label  text="Artist name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="artistName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

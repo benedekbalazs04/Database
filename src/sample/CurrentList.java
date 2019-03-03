@@ -1,0 +1,5 @@
+package sample;
+
+public enum CurrentList {
+    ARTISTS_LIST, ALBUMS_LIST, SONGS_LIST, ARTIST_ALBUMS, ARTIST_SONGS,ALBUM_SONGS
+}

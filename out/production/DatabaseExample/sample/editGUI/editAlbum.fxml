@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.editGUI.EditAlbum"
+            maxHeight="400.0" maxWidth="400.0">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Please fill Album name and Artist name fields!"
+                   GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3"/>
+            <Label text="Album name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="albumName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Artist name" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="artistName" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

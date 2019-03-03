@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Add new">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#addArtist" text="Artist" />
+                                <MenuItem mnemonicParsing="false" onAction="#addAlbum" text="Album" />
+                                <MenuItem mnemonicParsing="false" onAction="#addSong" text="Song" />
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#clickedExit" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#editItem" text="Edit" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clickedAbout" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <right>
+        <GridPane prefHeight="374.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="43.28570556640625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" prefWidth="123.71429443359375" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <Button fx:id="bArtistList" mnemonicParsing="false" onAction="#showArtistsList" prefHeight="25.0" prefWidth="105.0" text="Artists list">
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Button fx:id="bAlbumsList" mnemonicParsing="false" onAction="#showAlbumsList" prefHeight="25.0" prefWidth="105.0" text="Albums list">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="bSongsList" mnemonicParsing="false" onAction="#showSongsList" prefHeight="25.0" prefWidth="105.0" text="Songs list">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                        <Button fx:id="bArtistAlbums" mnemonicParsing="false" onAction="#showArtistAlbums" prefHeight="25.0" prefWidth="105.0" text="Artist albums">
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="bShowSelectedSongs" mnemonicParsing="false" onAction="#showArtistOrAlbumSongs" prefHeight="25.0" prefWidth="105.0" text="Artist songs">
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </right>
+    <bottom>
+        <GridPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.85711669921875" minWidth="10.0" prefWidth="86.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.85711669921875" minWidth="10.0" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="527.1428833007812" minWidth="10.0" prefWidth="286.71429443359375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="527.1428833007812" minWidth="10.0" prefWidth="172.28570556640625" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="23.857147216796875" minHeight="10.0" prefHeight="18.28570556640625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.857147216796875" minHeight="10.0" prefHeight="27.71429443359375" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="23.428558349609375" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="searchField" prefHeight="25.0" prefWidth="286.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="bSearch" mnemonicParsing="false" onAction="#searchFromList" prefHeight="25.0" prefWidth="58.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+    </bottom>
+    <left>
+        <Pane prefHeight="309.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="labelTopOnTable" alignment="CENTER" prefHeight="32.0" prefWidth="418.0" text="Artist list">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <TableView fx:id="mainTableView" prefHeight="293.0" prefWidth="418.0" />
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
